@@ -6,6 +6,11 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 import javax.servlet.Filter;
 
 public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+    /*TODO: File chinh cua spring MVC
+     *   khoi chay project spring MVC
+     *   project se goi file web.xml
+     *   chua dispatcher servlet (Khoi tao moi truong
+     *  du an) */
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{AppConfiguration.class};

@@ -12,6 +12,8 @@
     Welcome to Admin Page
 </h1>
 <div sec:authorize="isAuthenticated()">
+    <!--TODO: sec:authorize: sẽ đánh giá quyền truy cập.-->
+    <!--TODO: sec:authentication: sẽ truy cập đối tượng Authentication hiện tại.-->
     <a th:href="@{/logout}">Logout</a>
 </div>
 </body>

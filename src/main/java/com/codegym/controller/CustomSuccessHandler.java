@@ -33,7 +33,7 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
         redirectStrategy.sendRedirect(request, response, targetUrl);
     }
 
-    // Phương thức này được sử dụng để lấy ra các role của user
+    //TODO:  Phương thức này được sử dụng để lấy ra các role của user
     // hiện tại đang đăng nhập và trả về URL tương ứng
     protected String determineTargetUrl(Authentication authentication) {
         String url;
@@ -45,20 +45,20 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
         }
 
         if (isDba(roles)) {
-            // Nếu là tài khoản đăng nhập có role là DBA
+            //TODO: Nếu là tài khoản đăng nhập có role là DBA
             // thì điều hướng đến /dba
             url = "/dba";
         } else if (isAdmin(roles)) {
-            // Nếu là tài khoản đăng nhập có role là ADMIN
-            // thì điều hướng đến /admin
+            // TODO: Nếu là tài khoản đăng nhập có role là ADMIN
+            //  thì điều hướng đến /admin
             url = "/admin";
         } else if (isUser(roles)) {
-            // Nếu là tài khoản đăng nhập có role là USER
-            // thì điều hướng đến /home
+            // TODO: Nếu là tài khoản đăng nhập có role là USER
+            //      thì điều hướng đến /home
             url = "/home";
         } else {
-            // Nếu tài khoản đăng nhập không có quyền truy cập
-            // sẽ điều hướng tới /accessDenied
+            // TODO: Nếu tài khoản đăng nhập không có quyền truy cập
+            //      sẽ điều hướng tới /accessDenied
             url = "/accessDenied";
         }
 

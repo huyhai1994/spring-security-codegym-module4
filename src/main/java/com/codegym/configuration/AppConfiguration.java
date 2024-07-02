@@ -43,14 +43,18 @@ public class AppConfiguration implements WebMvcConfigurer, ApplicationContextAwa
 
     @Bean
     public SpringTemplateEngine templateEngine() {
+        /*TODO: */
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());
         templateEngine.addDialect(new SpringSecurityDialect());
+        /*TODO: - Thêm cài đặt trong config Thymeleaf ho tro spring security:*/
         return templateEngine;
     }
 
     @Bean
     public ThymeleafViewResolver viewResolver() {
+        /*TODO: Co che de xu ly tang view
+         *  cua Spring MVC*/
         ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
         viewResolver.setTemplateEngine(templateEngine());
         viewResolver.setCharacterEncoding("UTF-8");
